@@ -9,29 +9,4 @@
     <preference for="SoftCommerce\ProfileHistory\Api\Data\HistorySearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
     <preference for="SoftCommerce\ProfileHistory\Api\HistoryRepositoryInterface" type="SoftCommerce\ProfileHistory\Model\HistoryRepository"/>
     <preference for="SoftCommerce\ProfileHistory\Api\HistoryManagementInterface" type="SoftCommerce\ProfileHistory\Model\HistoryManagement"/>
-    <!-- Profile history UI list-->
-    <!-- type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
-        <arguments>
-            <argument name="collections" xsi:type="array">
-                <item name="softcommerce_profile_history_listing_data_source" xsi:type="string">SoftCommerce\ProfileHistory\Model\ResourceModel\History\GridCollection</item>
-            </argument>
-        </arguments>
-    </type>
-    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
-        <arguments>
-            <argument name="entities" xsi:type="array">
-                <item name="SoftCommerce\ProfileHistory\Api\Data\HistoryInterface" xsi:type="string">SoftCommerce\ProfileHistory\Api\HistoryRepositoryInterface</item>
-            </argument>
-        </arguments>
-    </type>
-    <type name="Magento\Framework\EntityManager\MetadataPool">
-        <arguments>
-            <argument name="metadata" xsi:type="array">
-                <item name="SoftCommerce\ProfileHistory\Api\Data\HistoryInterface" xsi:type="array">
-                    <item name="entityTableName" xsi:type="const">SoftCommerce\ProfileHistory\Api\Data\HistoryInterface::DB_TABLE_NAME</item>
-                    <item name="identifierField" xsi:type="const">SoftCommerce\ProfileHistory\Api\Data\HistoryInterface::ENTITY_ID</item>
-                </item>
-            </argument>
-        </arguments>
-    </type -->
 </config>
