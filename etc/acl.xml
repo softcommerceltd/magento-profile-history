@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+ ~ Copyright © Soft Commerce Ltd. All rights reserved.
+ ~ See LICENSE.txt for license details.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="SoftCommerce_Core::softcommerce_core">
+                    <resource id="SoftCommerce_Profile::profile_core" title="SoftCommerce Profile" translate="title" sortOrder="20">
+                        <resource id="SoftCommerce_ProfileHistory::profile_history" title="View History" translate="title" sortOrder="30"/>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
