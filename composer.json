@@ -2,7 +2,7 @@
     "name": "softcommerce/module-profile-history",
     "description": "SoftCommerce -- Magento: Profile History Module.",
     "require": {
-        "php": "~7.2.0||~7.3.0||~7.4.0",
+        "php": "~7.4.0||~8.0.0||~8.1.0",
         "magento/magento-composer-installer": "*",
         "softcommerce/module-profile": "*"
     },
@@ -16,5 +16,5 @@
             "SoftCommerce\\ProfileHistory\\": ""
         }
     },
-    "version": "1.0.1"
+    "version": "1.2.1"
 }
