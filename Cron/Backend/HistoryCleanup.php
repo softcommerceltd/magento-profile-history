@@ -74,7 +74,6 @@ class HistoryCleanup
      */
     private function getHistoryLifetime(): int
     {
-
         if ($historyLifetime = $this->scopeConfig->getValue(self::XML_PATH_HISTORY_LIFETIME)) {
             $historyLifetime = $historyLifetime * self::SECONDS_IN_DAY;
         } else {
