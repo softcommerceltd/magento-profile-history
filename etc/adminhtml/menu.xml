@@ -14,6 +14,6 @@
              sortOrder="10"
              parent="SoftCommerce_Profile::profile_core"
              action="softcommerce/profileHistory/index"
-             resource="SoftCommerce_ProfileHistory::profile_history"/>
+             resource="SoftCommerce_ProfileHistory::manage"/>
     </menu>
 </config>

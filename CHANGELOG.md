@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.3
+- **Enhancement**: Improvements to ACL rules.
+
 ### Version 1.2.2
 - **Compatibility**: Compatibility with Magento Extension Quality Program (EQP).
 

@@ -10,8 +10,8 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="SoftCommerce_Core::softcommerce_core">
-                    <resource id="SoftCommerce_Profile::profile_core" title="SoftCommerce Profile" translate="title" sortOrder="20">
-                        <resource id="SoftCommerce_ProfileHistory::profile_history" title="View History" translate="title" sortOrder="30"/>
+                    <resource id="SoftCommerce_Profile::profile">
+                        <resource id="SoftCommerce_ProfileHistory::manage" title="History Actions" translate="title" sortOrder="20"/>
                     </resource>
                 </resource>
             </resource>

@@ -21,7 +21,7 @@
         <settings>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>SoftCommerce_ProfileHistory::profile_history</aclResource>
+        <aclResource>SoftCommerce_ProfileHistory::manage</aclResource>
         <dataProvider class="SoftCommerce\ProfileHistory\Ui\DataProvider\HistoryListingDataProvider" name="softcommerce_profile_history_listing_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
@@ -112,18 +112,5 @@
                 <label translate="true">Updated Date</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="SoftCommerce\Core\Ui\Component\Listing\Columns\Actions">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="urlPath" xsi:type="string">softcommerce/profileHistory/delete</item>
-                    <item name="urlEntityParamName" xsi:type="string">id</item>
-                    <item name="actionLabel" xsi:type="string" translate="true">Delete</item>
-                    <item name="confirmMessage" xsi:type="string" translate="true">Confirm delete selected history records?</item>
-                </item>
-            </argument>
-            <settings>
-                <indexField>entity_id</indexField>
-            </settings>
-        </actionsColumn>
     </columns>
 </listing>
