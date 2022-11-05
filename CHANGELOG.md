@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.4
+- **Enhancement**: Added batch size limit to history data insert per statement.
+
 ### Version 1.2.3
 - **Enhancement**: Improvements to ACL rules.
 

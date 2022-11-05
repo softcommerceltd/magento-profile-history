@@ -27,5 +27,8 @@
                     table="softcommerce_profile_history" column="parent_id"
                     referenceTable="softcommerce_profile_entity" referenceColumn="entity_id"
                     onDelete="CASCADE"/>
+        <index referenceId="SOFTCOMMERCE_PROFILE_HISTORY_TYPE_ID" indexType="btree">
+            <column name="type_id"/>
+        </index>
     </table>
 </schema>

@@ -3,8 +3,8 @@
         "column": {
             "entity_id": true,
             "parent_id": true,
-            "type_id": true,
             "status": true,
+            "type_id": true,
             "message": true,
             "created_at": true,
             "updated_at": true
@@ -12,6 +12,9 @@
         "constraint": {
             "PRIMARY": true,
             "FK_1A70742AE8D5AE9FF1A42C4E37A913B8": true
+        },
+        "index": {
+            "SOFTCOMMERCE_PROFILE_HISTORY_TYPE_ID": true
         }
     }
 }

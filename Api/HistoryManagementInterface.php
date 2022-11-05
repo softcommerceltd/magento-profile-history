@@ -34,7 +34,7 @@ interface HistoryManagementInterface
         int $profileId,
         string $typeId,
         string $status = Status::COMPLETE,
-        $message = []
+        array $message = []
     ): int;
 
     /**

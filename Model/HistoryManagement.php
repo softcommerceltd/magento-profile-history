@@ -22,17 +22,17 @@ class HistoryManagement implements HistoryManagementInterface
     /**
      * @var int|null
      */
-    private $lastInsertId;
+    private ?int $lastInsertId = null;
 
     /**
      * @var ResourceModel\History
      */
-    private $resource;
+    private ResourceModel\History $resource;
 
     /**
      * @var SerializerInterface
      */
-    private $serializer;
+    private SerializerInterface $serializer;
 
     /**
      * @param ResourceModel\History $resource
@@ -61,12 +61,12 @@ class HistoryManagement implements HistoryManagementInterface
         int $profileId,
         string $typeId,
         string $status = Status::COMPLETE,
-        $message = []
+        array $message = []
     ): int {
         try {
             $message = $this->serializer->serialize(is_array($message) ? $message : [$message]);
         } catch (\InvalidArgumentException $e) {
-            $message = [];
+            $message = __('Could not serialize message. Error: %1', $e->getMessage());
         }
 
         $requestData = [
