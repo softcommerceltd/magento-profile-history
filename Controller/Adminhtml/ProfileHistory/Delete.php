@@ -30,7 +30,7 @@ class Delete extends Action implements HttpPostActionInterface
     /**
      * @var HistoryRepositoryInterface
      */
-    private $repository;
+    private HistoryRepositoryInterface $repository;
 
     /**
      * @param HistoryRepositoryInterface $repository

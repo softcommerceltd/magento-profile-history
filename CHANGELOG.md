@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.4
+- **Compatibility**: Compatibility with Magento [OS/AC] 2.4.5 and PHP 8.
+
 ### Version 1.2.3
 - **Enhancement**: Improvements to ACL rules.
 

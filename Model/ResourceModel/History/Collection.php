@@ -28,14 +28,14 @@ use SoftCommerce\ProfileHistory\Model\ResourceModel;
 class Collection extends AbstractCollection
 {
     /**
-     * @inheritDoc
+     * @var string
      */
     protected $_idFieldName = HistoryInterface::ENTITY_ID;
 
     /**
      * @var RequestInterface
      */
-    private $request;
+    private RequestInterface $request;
 
     /**
      * @array

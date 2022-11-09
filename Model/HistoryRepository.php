@@ -27,27 +27,27 @@ class HistoryRepository implements HistoryRepositoryInterface
     /**
      * @var ResourceModel\History
      */
-    private $resource;
+    private ResourceModel\History $resource;
 
     /**
      * @var HistoryFactory
      */
-    private $historyFactory;
+    private HistoryFactory $historyFactory;
 
     /**
      * @var ResourceModel\History\CollectionFactory
      */
-    private $collectionFactory;
+    private ResourceModel\History\CollectionFactory $collectionFactory;
 
     /**
      * @var HistorySearchResultsInterfaceFactory
      */
-    private $searchResultsFactory;
+    private HistorySearchResultsInterfaceFactory $searchResultsFactory;
 
     /**
      * @var CollectionProcessorInterface
      */
-    private $collectionProcessor;
+    private CollectionProcessorInterface $collectionProcessor;
 
     /**
      * @param CollectionProcessorInterface $collectionProcessor
@@ -75,7 +75,6 @@ class HistoryRepository implements HistoryRepositoryInterface
      */
     public function getList(SearchCriteriaInterface $searchCriteria)
     {
-        /** @var ResourceModel\History\Collection $collection */
         $collection = $this->collectionFactory->create();
         $this->collectionProcessor->process($searchCriteria, $collection);
 

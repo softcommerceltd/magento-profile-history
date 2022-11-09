@@ -22,17 +22,17 @@ class HistoryManagement implements HistoryManagementInterface
     /**
      * @var int|null
      */
-    private $lastInsertId;
+    private ?int $lastInsertId = null;
 
     /**
      * @var ResourceModel\History
      */
-    private $resource;
+    private ResourceModel\History $resource;
 
     /**
      * @var SerializerInterface
      */
-    private $serializer;
+    private SerializerInterface $serializer;
 
     /**
      * @param ResourceModel\History $resource
