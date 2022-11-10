@@ -28,17 +28,17 @@ class MassDelete extends Action implements HttpPostActionInterface
     /**
      * @var ResourceModel\History\CollectionFactory
      */
-    private $collectionFactory;
+    private ResourceModel\History\CollectionFactory $collectionFactory;
 
     /**
      * @var Filter
      */
-    private $filter;
+    private Filter $filter;
 
     /**
      * @var ResourceModel\History
      */
-    private $resource;
+    private ResourceModel\History $resource;
 
     /**
      * @param ResourceModel\History $resource

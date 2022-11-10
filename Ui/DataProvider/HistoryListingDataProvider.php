@@ -25,7 +25,7 @@ class HistoryListingDataProvider extends AbstractDataProvider
     /**
      * @var PoolInterface
      */
-    private $pool;
+    private PoolInterface $pool;
 
     /**
      * @param CollectionFactory $collectionFactory

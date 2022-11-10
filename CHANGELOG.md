@@ -1,6 +1,7 @@
 ## Changelog
 
 ### Version 1.2.4
+- **Compatibility**: Compatibility with Magento [OS/AC] 2.4.5 and PHP 8.
 - **Enhancement**: Added batch size limit to history data insert per statement.
 
 ### Version 1.2.3

@@ -18,15 +18,15 @@ use SoftCommerce\ProfileHistory\Model\ResourceModel;
  */
 class History extends AbstractModel implements HistoryInterface, IdentityInterface
 {
-    const CACHE_TAG = 'softcommerce_profile_history';
+    private const CACHE_TAG = 'softcommerce_profile_history';
 
     /**
-     * @inheritDoc
+     * @var string
      */
     protected $_cacheTag = 'softcommerce_profile_history';
 
     /**
-     * @inheritDoc
+     * @var string
      */
     protected $_eventPrefix = 'softcommerce_profile_history';
 
