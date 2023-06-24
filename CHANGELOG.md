@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.6
+- **Compatibility**: Add compatibility for PHP 8.2 and Magento 2.4.6-p1
+
 ### Version 1.2.5
 - **Fix**: Applied a fix to composer.json license compatibility.
 
