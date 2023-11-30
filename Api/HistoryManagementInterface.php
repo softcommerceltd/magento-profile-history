@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace SoftCommerce\ProfileHistory\Api;
 
 use Magento\Framework\Exception\LocalizedException;
-use SoftCommerce\Core\Model\Source\Status;
+use SoftCommerce\Core\Model\Source\StatusInterface;
 
 /**
  * Interface HistoryManagementInterface
@@ -33,7 +33,7 @@ interface HistoryManagementInterface
     public function create(
         int $profileId,
         string $typeId,
-        string $status = Status::COMPLETE,
+        string $status = StatusInterface::COMPLETE,
         array $message = []
     ): int;
 

@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.7
+- **Compatibility**: Add compatibility for Magento 2.4.6-p3 and Magento 2.4.7
+
 ### Version 1.2.6
 - **Compatibility**: Add compatibility for PHP 8.2 and Magento 2.4.6-p1
 

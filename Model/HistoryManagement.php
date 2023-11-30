@@ -9,10 +9,9 @@ declare(strict_types=1);
 namespace SoftCommerce\ProfileHistory\Model;
 
 use Magento\Framework\Serialize\SerializerInterface;
-use SoftCommerce\Core\Model\Source\Status;
+use SoftCommerce\Core\Model\Source\StatusInterface;
 use SoftCommerce\ProfileHistory\Api\Data\HistoryInterface;
 use SoftCommerce\ProfileHistory\Api\HistoryManagementInterface;
-use SoftCommerce\ProfileHistory\Model\ResourceModel;
 
 /**
  * @inhertidoc
@@ -60,7 +59,7 @@ class HistoryManagement implements HistoryManagementInterface
     public function create(
         int $profileId,
         string $typeId,
-        string $status = Status::COMPLETE,
+        string $status = StatusInterface::COMPLETE,
         array $message = []
     ): int {
         try {

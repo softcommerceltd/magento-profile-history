@@ -11,7 +11,7 @@ namespace SoftCommerce\ProfileHistory\Model\ResourceModel;
 use Magento\Framework\DB\Select;
 use Magento\Framework\Exception\LocalizedException;
 use SoftCommerce\Core\Model\ResourceModel\AbstractResource;
-use SoftCommerce\Core\Model\Source\Status;
+use SoftCommerce\Core\Model\Source\StatusInterface;
 use SoftCommerce\ProfileHistory\Api\Data\HistoryInterface;
 
 /**
@@ -58,7 +58,7 @@ class History extends AbstractResource
             ->from($this->getMainTable(), HistoryInterface::ENTITY_ID)
             ->where(HistoryInterface::PROFILE_ID . ' = ?', $profileId)
             ->where(HistoryInterface::ACTION_CODE . ' in (?)', is_array($actionCode) ? $actionCode : [$actionCode])
-            ->where(HistoryInterface::STATUS. ' in (?)', [Status::SUCCESS, Status::COMPLETE])
+            ->where(HistoryInterface::STATUS. ' in (?)', [StatusInterface::SUCCESS, StatusInterface::COMPLETE])
             ->limit(1);
 
         return $adapter->fetchOne($select);
@@ -84,7 +84,7 @@ class History extends AbstractResource
         $adapter = $this->getConnection();
         $select = $adapter->select()
             ->from($this->getMainTable(), [HistoryInterface::PROCESSED_AT])
-            ->where(HistoryInterface::STATUS. ' != ?', Status::PROCESSING);
+            ->where(HistoryInterface::STATUS. ' != ?', StatusInterface::PROCESSING);
 
         if (null !== $profileId) {
             $select->where(HistoryInterface::PROFILE_ID.' = ?', $profileId);

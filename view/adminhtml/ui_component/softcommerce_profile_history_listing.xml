@@ -83,7 +83,7 @@
                 <label translate="true">Status</label>
                 <dataType>select</dataType>
                 <filter>select</filter>
-                <options class="SoftCommerce\Core\Model\Source\Status"/>
+                <options class="SoftCommerce\Core\Model\Source\StatusInterface"/>
             </settings>
         </column>
         <column name="message" class="SoftCommerce\Core\Ui\Component\Listing\Columns\ModalContentRenderer" component="SoftCommerce_Core/js/grid/columns/column/modal-content">

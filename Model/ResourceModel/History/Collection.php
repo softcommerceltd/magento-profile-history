@@ -16,7 +16,7 @@ use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Psr\Log\LoggerInterface;
-use SoftCommerce\Core\Model\Source\Status;
+use SoftCommerce\Core\Model\Source\StatusInterface;
 use SoftCommerce\Profile\Api\Data\ProfileInterface;
 use SoftCommerce\ProfileHistory\Api\Data\HistoryInterface;
 use SoftCommerce\ProfileHistory\Model\History;
@@ -114,7 +114,7 @@ class Collection extends AbstractCollection
      */
     public function addPendingFilter()
     {
-        $this->addFieldToFilter(HistoryInterface::STATUS, ['eq' => Status::PENDING]);
+        $this->addFieldToFilter(HistoryInterface::STATUS, ['eq' => StatusInterface::PENDING]);
         return $this;
     }
 
