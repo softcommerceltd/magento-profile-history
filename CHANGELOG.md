@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.2.8
+- **Compatibility**: Introduced support for PHP 8.3
+
 ### Version 1.2.7
 - **Compatibility**: Add compatibility for Magento 2.4.6-p3 and Magento 2.4.7
 
