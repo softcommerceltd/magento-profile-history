@@ -12,10 +12,10 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: 1.2.8 [CE|EE|ECE 2.4.0-2.4.7] 25 Apr 2024
-          tag_name: 1.2.8
+          name: 1.2.9 [CE|EE|ECE 2.4.0-2.4.7] 13 Jan 2025
+          tag_name: 1.2.9
           body: |-
-            ### softcommerce/module-profile-history [1.2.8]
-            - **Compatibility**: Introduced support for PHP 8.3
+            ### softcommerce/module-profile-history [1.2.9]
+            - **Enhancement**: Included `servicepoint` type to account for `pakshop` facility.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
