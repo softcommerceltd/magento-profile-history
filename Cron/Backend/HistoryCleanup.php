@@ -10,7 +10,6 @@ namespace SoftCommerce\ProfileHistory\Cron\Backend;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\ResourceConnection;
-use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use SoftCommerce\ProfileHistory\Api\Data\HistoryInterface;
 
@@ -25,44 +24,26 @@ class HistoryCleanup
     private const XML_PATH_HISTORY_LIFETIME = 'softcommerce_profile/profile_config/history_lifetime';
 
     /**
-     * @var AdapterInterface
-     */
-    private AdapterInterface $connection;
-
-    /**
-     * @var DateTime
-     */
-    private DateTime $dateTime;
-
-    /**
-     * @var ScopeConfigInterface
-     */
-    private ScopeConfigInterface $scopeConfig;
-
-    /**
      * @param DateTime $dateTime
      * @param ResourceConnection $resource
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        DateTime $dateTime,
-        ResourceConnection $resource,
-        ScopeConfigInterface $scopeConfig
-    ) {
-        $this->dateTime = $dateTime;
-        $this->connection = $resource->getConnection();
-        $this->scopeConfig = $scopeConfig;
-    }
+        private DateTime $dateTime,
+        private ResourceConnection $resource,
+        private ScopeConfigInterface $scopeConfig
+    ) {}
 
     /**
      * @return void
      */
     public function execute(): void
     {
-        $this->connection->delete(
-            $this->connection->getTableName(HistoryInterface::DB_TABLE_NAME),
+        $connection = $this->resource->getConnection();
+        $connection->delete(
+            $connection->getTableName(HistoryInterface::DB_TABLE_NAME),
             [
-                HistoryInterface::CREATED_AT . ' < ?' => $this->connection->formatDate(
+                HistoryInterface::CREATED_AT . ' < ?' => $connection->formatDate(
                     $this->dateTime->gmtTimestamp() - $this->getHistoryLifetime()
                 )
             ]
