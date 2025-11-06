@@ -25,31 +25,6 @@ use SoftCommerce\ProfileHistory\Model\ResourceModel;
 class HistoryRepository implements HistoryRepositoryInterface
 {
     /**
-     * @var ResourceModel\History
-     */
-    private ResourceModel\History $resource;
-
-    /**
-     * @var HistoryFactory
-     */
-    private HistoryFactory $historyFactory;
-
-    /**
-     * @var ResourceModel\History\CollectionFactory
-     */
-    private ResourceModel\History\CollectionFactory $collectionFactory;
-
-    /**
-     * @var HistorySearchResultsInterfaceFactory
-     */
-    private HistorySearchResultsInterfaceFactory $searchResultsFactory;
-
-    /**
-     * @var CollectionProcessorInterface
-     */
-    private CollectionProcessorInterface $collectionProcessor;
-
-    /**
      * @param CollectionProcessorInterface $collectionProcessor
      * @param ResourceModel\History $resource
      * @param ResourceModel\History\CollectionFactory $collectionFactory
@@ -57,17 +32,12 @@ class HistoryRepository implements HistoryRepositoryInterface
      * @param HistorySearchResultsInterfaceFactory $searchResultsFactory
      */
     public function __construct(
-        CollectionProcessorInterface $collectionProcessor,
-        ResourceModel\History $resource,
-        ResourceModel\History\CollectionFactory $collectionFactory,
-        HistoryFactory $historyFactory,
-        HistorySearchResultsInterfaceFactory $searchResultsFactory
+        private readonly CollectionProcessorInterface $collectionProcessor,
+        private readonly ResourceModel\History $resource,
+        private readonly ResourceModel\History\CollectionFactory $collectionFactory,
+        private readonly HistoryFactory $historyFactory,
+        private readonly HistorySearchResultsInterfaceFactory $searchResultsFactory
     ) {
-        $this->resource = $resource;
-        $this->historyFactory = $historyFactory;
-        $this->collectionFactory = $collectionFactory;
-        $this->searchResultsFactory = $searchResultsFactory;
-        $this->collectionProcessor = $collectionProcessor;
     }
 
     /**

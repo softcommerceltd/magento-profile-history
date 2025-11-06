@@ -28,19 +28,13 @@ class Delete extends Action implements HttpPostActionInterface
     public const ADMIN_RESOURCE = 'SoftCommerce_ProfileHistory::manage';
 
     /**
-     * @var HistoryRepositoryInterface
-     */
-    private HistoryRepositoryInterface $repository;
-
-    /**
      * @param HistoryRepositoryInterface $repository
      * @param Context $context
      */
     public function __construct(
-        HistoryRepositoryInterface $repository,
+        private readonly HistoryRepositoryInterface $repository,
         Context $context
     ) {
-        $this->repository = $repository;
         parent::__construct($context);
     }
 

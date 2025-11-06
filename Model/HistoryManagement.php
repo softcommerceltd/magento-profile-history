@@ -24,25 +24,13 @@ class HistoryManagement implements HistoryManagementInterface
     private ?int $lastInsertId = null;
 
     /**
-     * @var ResourceModel\History
-     */
-    private ResourceModel\History $resource;
-
-    /**
-     * @var SerializerInterface
-     */
-    private SerializerInterface $serializer;
-
-    /**
      * @param ResourceModel\History $resource
      * @param SerializerInterface $serializer
      */
     public function __construct(
-        ResourceModel\History $resource,
-        SerializerInterface $serializer
+        private readonly ResourceModel\History $resource,
+        private readonly SerializerInterface $serializer
     ) {
-        $this->resource = $resource;
-        $this->serializer = $serializer;
     }
 
     /**

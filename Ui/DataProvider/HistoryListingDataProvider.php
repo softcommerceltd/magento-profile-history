@@ -23,11 +23,6 @@ use SoftCommerce\ProfileHistory\Model\ResourceModel\History\CollectionFactory;
 class HistoryListingDataProvider extends AbstractDataProvider
 {
     /**
-     * @var PoolInterface
-     */
-    private PoolInterface $pool;
-
-    /**
      * @param CollectionFactory $collectionFactory
      * @param PoolInterface $pool
      * @param string $name
@@ -38,7 +33,7 @@ class HistoryListingDataProvider extends AbstractDataProvider
      */
     public function __construct(
         CollectionFactory $collectionFactory,
-        PoolInterface $pool,
+        private readonly PoolInterface $pool,
         string $name,
         string $primaryFieldName,
         string $requestFieldName,
@@ -46,7 +41,6 @@ class HistoryListingDataProvider extends AbstractDataProvider
         array $data = []
     ) {
         $this->collection = $collectionFactory->create();
-        $this->pool = $pool;
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
 

@@ -26,35 +26,17 @@ use SoftCommerce\ProfileHistory\Model\ResourceModel;
 class MassDelete extends Action implements HttpPostActionInterface
 {
     /**
-     * @var ResourceModel\History\CollectionFactory
-     */
-    private ResourceModel\History\CollectionFactory $collectionFactory;
-
-    /**
-     * @var Filter
-     */
-    private Filter $filter;
-
-    /**
-     * @var ResourceModel\History
-     */
-    private ResourceModel\History $resource;
-
-    /**
      * @param ResourceModel\History $resource
      * @param ResourceModel\History\CollectionFactory $collectionFactory
      * @param Filter $filter
      * @param Context $context
      */
     public function __construct(
-        ResourceModel\History $resource,
-        ResourceModel\History\CollectionFactory $collectionFactory,
-        Filter $filter,
+        private readonly ResourceModel\History $resource,
+        private readonly ResourceModel\History\CollectionFactory $collectionFactory,
+        private readonly Filter $filter,
         Context $context
     ) {
-        $this->resource = $resource;
-        $this->collectionFactory = $collectionFactory;
-        $this->filter = $filter;
         parent::__construct($context);
     }
 

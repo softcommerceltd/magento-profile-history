@@ -33,11 +33,6 @@ class Collection extends AbstractCollection
     protected $_idFieldName = HistoryInterface::ENTITY_ID;
 
     /**
-     * @var RequestInterface
-     */
-    private RequestInterface $request;
-
-    /**
      * @array
      */
     private const FULLTEXT_SEARCH_FIELDS = [
@@ -56,15 +51,14 @@ class Collection extends AbstractCollection
      * @param AbstractDb|null $resource
      */
     public function __construct(
-        RequestInterface $request,
+        private readonly RequestInterface $request,
         EntityFactoryInterface $entityFactory,
         LoggerInterface $logger,
         FetchStrategyInterface $fetchStrategy,
         ManagerInterface $eventManager,
-        AdapterInterface $connection = null,
-        AbstractDb $resource = null
+        ?AdapterInterface $connection = null,
+        ?AbstractDb $resource = null
     ) {
-        $this->request = $request;
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
     }
 
