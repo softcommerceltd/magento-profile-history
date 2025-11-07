@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2025-11-07
+### BREAKING CHANGES
+- add PHP 8.3/8.4 compatibility and modernize history module
+### Added
+- add History PostProcessor and admin configuration
+
 ## [1.2.11] - 2025-07-24
 ### Changed
 - The metapackage release notes are now properly extracting and formatting the module changes from the CHANGELOG.md file
