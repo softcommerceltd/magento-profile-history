@@ -1,6 +1,6 @@
 {
     "name": "softcommerce/module-profile-history",
-    "description": "SoftCommerce -- Magento: Profile History Module.",
+    "description": "Byte8 -- Magento: Profile History Module.",
     "require": {
         "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0",
         "softcommerce/module-profile": "*"
